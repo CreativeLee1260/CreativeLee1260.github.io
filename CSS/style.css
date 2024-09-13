@@ -1,0 +1,82 @@
+/*css Reset*/
+body, header, nav, footer, main, h1, div, img
+{
+	margin:0;
+	padding: 0;
+	border:0;
+}
+
+body
+{
+	background-color: ghostWhite;
+}
+
+header
+{
+	font-size: 2em;
+	background-color: black;
+	text-align: center;
+	font-family: Lucida Handwriting, verdana, serif;
+	color: ghostWhite;
+}
+nav
+{
+	background-color: GhostWhite;
+}
+nav ul
+{
+	list-style: none;
+	margin-top: 0%;
+	margin-bottom: 0%;
+	margin-left: 0%;
+	margin-right: 0%;
+	text-align: center;
+}
+nav li
+{
+	display: inline-block;
+	font-size: 1.5em;
+	font-family: Verdana, Arial, sans-serif;
+	font-weight: normal;
+	text-decoration: none;
+}
+nav li a
+{
+	background: black;
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	margin: 1em;
+	border: solid;
+	border-color: white;
+	border-radius: 40px;
+}
+nav li a:hover 
+{
+    filter: invert(1);
+}
+main
+{
+	clear: both;
+	background-color: #fff;
+	margin: 8%;
+	font-size:1.25em;
+}
+footer
+{
+	background-color: black;
+}
+footer p
+{
+	font-size: 1em;
+	text-align: center;
+	color: GhostWhite;
+	padding: 0 1em;
+}
+footer p a
+{
+	color: ghostWhite;
+	text-decoration: none;
+}
