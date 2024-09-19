@@ -11,6 +11,15 @@ body
 	background-color: ghostWhite;
 }
 
+body h2 
+{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body h3
+{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 header
 {
 	font-size: 2em;
@@ -21,7 +30,12 @@ header
 }
 nav
 {
-	background-color: GhostWhite;
+	top: 0;
+	position: -webkit-sticky;
+	position: sticky;
+	backdrop-filter: blur(40px);
+	background-color: rgba(0, 0, 0, 0.219);
+	padding-bottom: 0em;
 }
 nav ul
 {
@@ -35,7 +49,7 @@ nav ul
 nav li
 {
 	display: inline-block;
-	font-size: 1.5em;
+	font-size: 1.25em;
 	font-family: Verdana, Arial, sans-serif;
 	font-weight: normal;
 	text-decoration: none;
@@ -44,24 +58,25 @@ nav li a
 {
 	background: black;
 	display: block;
-	color: #fff;
+	color: white;
 	text-align: center;
 	padding: 0.5em 1em;
 	text-decoration: none;
-	margin: 1em;
-	border: solid;
-	border-color: white;
+	margin: 0.5em;
 	border-radius: 40px;
 }
 nav li a:hover 
 {
     filter: invert(1);
 }
-.amap
-{
-	border-width: 0px;
-	border-color: black;
-	border-radius: 40px;
+
+.amap {
+    border-width: 0px;
+    border-color: black;
+    border-radius: 40px;
+    max-width: 100%;
+    width: 500px;  
+    height: 500px; 
 }
 main
 {
@@ -70,13 +85,41 @@ main
 	margin: 8%;
 	font-size:1.25em;
 }
+
+
+#assignments
+{
+	font-size: 1.25em;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: bold;
+}
+
+#assignments li a
+{
+	color: black;
+	text-decoration: none;
+}
+
+.fav-images
+{
+	max-width: fit-content;
+	width: 100%;
+	height: 100%;
+	border-width: 10px;
+	border-radius: 40px;
+}
+
 footer 
 {
-    position: relative; 
-    background-color: black;
+	position: -webkit-sticky;
+    position: sticky; 
+    background-color: rgba(0, 0, 0, 0.2);
     color: ghostWhite;
     text-align: center;
-    padding: 1em; 
+    padding: 0em; 
+	bottom: 0;
+	backdrop-filter: blur(40px);
+	border-radius: t;
 }
 
 footer p 
@@ -88,7 +131,7 @@ footer p
 
 footer p a 
 {
-    color: ghostWhite;
+    color: white;
 	text-align: center;
     text-decoration: none;
     transition: color 0.3s; /* Smooth transition for hover effect */
