@@ -57,26 +57,39 @@ nav li a:hover
 {
     filter: invert(1);
 }
+.amap
+{
+	border-width: 0px;
+	border-color: black;
+	border-radius: 40px;
+}
 main
 {
 	clear: both;
-	background-color: #fff;
+	background-color: ghostwhite;
 	margin: 8%;
 	font-size:1.25em;
 }
-footer
+footer 
 {
-	background-color: black;
+    position: relative; 
+    background-color: black;
+    color: ghostWhite;
+    text-align: center;
+    padding: 1em; 
 }
-footer p
+
+footer p 
 {
-	font-size: 1em;
+    font-size: 1em; 
+    margin: 0; 
+    padding: 0.5em 0; 
+}
+
+footer p a 
+{
+    color: ghostWhite;
 	text-align: center;
-	color: GhostWhite;
-	padding: 0 1em;
-}
-footer p a
-{
-	color: ghostWhite;
-	text-decoration: none;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth transition for hover effect */
 }
