@@ -110,12 +110,12 @@ footer
     padding: 0em; 
 	bottom: 0;
 	backdrop-filter: blur(40px);
-	border-radius: t;
 }
 
 footer p 
 {
-    font-size: 1em; 
+	font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: .7em; 
     margin: 0; 
     padding: 0.5em 0; 
 }
@@ -139,8 +139,6 @@ footer p a
 
 
 /*About me----------------------- */
-
-
 
 
 
@@ -200,3 +198,129 @@ footer p a
 }
 
 /*Hobbies-------------------------*/
+
+
+
+
+
+/* Media Query for mobile viewport*/
+
+@media screen and (min-width: 390px) 
+{
+    nav ul 
+	{
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;           /* Remove padding */
+        margin: 0;            /* Remove margin */
+    }
+
+    nav li 
+	{
+        display: block;       /* Stack items vertically */
+        font-size: 1em;
+        font-family: Verdana, Arial, sans-serif;
+        font-weight: normal;
+    }
+	nav li a
+	{
+		padding-top: 0.3em;
+		padding-bottom: 0.3em;
+	}
+}
+
+
+
+
+
+
+
+/* Media Query for tablet viewport*/
+
+@media screen and (min-width: 630px), print
+{
+
+	/* Tablet Viewport: show tablet-desktop class, hide mobile class */
+	
+
+	/* Tablet Viewport: style rule for header */
+	header
+	{
+		position: static;
+		padding-bottom: 0%;
+	}
+
+	/* Tablet Viewport: style rules for nav area */
+	nav li
+	{
+		border-top: none;
+		display: inline-block;
+	}
+
+	nav li a
+	{
+		padding: 0.5em 1em;
+		background-color: rgba(0, 0, 0, 0.534);
+		color: white;
+	}
+	/* Tablet Viewport: style rules for main content area */
+	
+	/* Tablet viewport styles for footer area*/
+	footer 
+	{
+		position: fixed; /* Fix the footer at the bottom */
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.2);
+        color: ghostWhite;
+        text-align: center;
+		padding-top: .5em;
+		padding-bottom: 1em;
+	}
+
+	footer p
+	{
+		font-size: 1em;
+	}
+}
+
+
+/*Media Query for Desktop viewport*/
+
+@media screen and (min-width: 1021px), print
+{
+	/* Desktop Viewport: style rules for nav area */
+	nav ul
+	{
+		text-align: center;
+	}
+
+	nav li
+	{
+		border: none;
+	}
+
+	nav li a
+	{
+		padding: 0.5em 1em;
+	}
+
+	nav li a:hover
+	{
+		color: white;
+		background-color: black;
+	}
+
+	/* Desktop Viewport: style rules for main content */
+	footer {
+		position: -webkit-sticky;
+		position: sticky; 
+		background-color: rgba(0, 0, 0, 0.2);
+		color: ghostWhite;
+		text-align: center;
+		padding-top: 0em;
+		padding-bottom: 0em; 
+		bottom: 0;
+		backdrop-filter: blur(40px);
+	}
+}
