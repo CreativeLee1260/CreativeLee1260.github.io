@@ -70,14 +70,6 @@ nav li a:hover
     filter: invert(1);
 }
 
-.amap {
-    border-width: 0px;
-    border-color: black;
-    border-radius: 40px;
-    max-width: 100%;
-    width: 500px;  
-    height: 500px; 
-}
 main
 {
 	clear: both;
@@ -139,7 +131,15 @@ footer p a
 
 
 /*About me----------------------- */
-
+.amap {
+    border-width: 0px;
+    border-color: black;
+    border-radius: 40px;
+    max-width: 100%;
+    width: 500px;  
+    height: 500px; 
+	box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.3);
+}
 
 
 
@@ -163,7 +163,10 @@ footer p a
 	color:hwb(227 45% 49%);
 	font-weight: 200;
 	border: solid;
+	border-width: 2px;
 	margin-left: 0.5em;
+	transition: 0.4s; /* Smooth transition for hover effect */
+
 }
 
 
@@ -205,13 +208,24 @@ footer p a
 
 /* Media Query for mobile viewport*/
 
-@media screen and (min-width: 390px) 
+@media screen and (min-width: 320px) 
 {
+
+	nav
+	{
+		position: static;
+		background-color: ghostwhite;
+		width: 100%;              /* Full width */
+        min-height: 50px;        /* Minimum height */
+	}
+
     nav ul 
 	{
         list-style-type: none; /* Remove bullet points */
         padding: 0;           /* Remove padding */
         margin: 0;            /* Remove margin */
+		padding-top: 0.1em;
+		padding-bottom: 0.5em;
     }
 
     nav li 
@@ -223,9 +237,20 @@ footer p a
     }
 	nav li a
 	{
-		padding-top: 0.3em;
-		padding-bottom: 0.3em;
+		padding-top: 1em;
+		padding-bottom: 1em;
 	}
+	footer 
+	{
+		position: static;
+		background-color: black;
+		color: rgb(255, 255, 255);
+		text-align: center;
+		padding: 0em; 
+		bottom: 0;
+
+	}
+
 }
 
 /* Media Query for tablet viewport*/
@@ -244,6 +269,15 @@ footer p a
 	}
 
 	/* Tablet Viewport: style rules for nav area */
+	nav
+	{
+		position: static;
+		background-color: ghostwhite;
+	}
+	nav ul
+	{
+		padding-top: 0.5em;
+	}
 	nav li
 	{
 		border-top: none;
@@ -253,8 +287,12 @@ footer p a
 	nav li a
 	{
 		padding: 0.5em 1em;
-		background-color: rgba(0, 0, 0, 0.534);
-		color: white;
+		background-color: rgb(0, 0, 0);
+		border-color: white;
+		border-width: 2px;
+		color: rgb(255, 255, 255);
+		font-size: 1em;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	}
 	/* Tablet Viewport: style rules for main content area */
 	
@@ -284,6 +322,15 @@ footer p a
 @media screen and (min-width: 1021px), print
 {
 	/* Desktop Viewport: style rules for nav area */
+	nav
+	{
+		top: 0;
+		position: -webkit-sticky;
+		position: sticky;
+		backdrop-filter: blur(40px);
+		background-color: rgba(0, 0, 0, 0.219);
+		padding-bottom: 0em;
+	}
 	nav ul
 	{
 		text-align: center;
@@ -296,7 +343,24 @@ footer p a
 
 	nav li a
 	{
-		padding: 0.5em 1em;
+		font-size: 1em;
+		font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+		background: rgba(0, 0, 0, 0.400);
+		display: flex;
+		color: white;
+		text-align: center;
+		width: 8em;
+		height: 1.25em;
+		align-items: center;         /* Center vertically */
+    	justify-content: center;    
+	    padding: 0.5em 0em;*/
+		text-decoration: none;
+		margin-left: 1em;
+		margin-right: 1em;
+		margin-top: 0.15em;
+		margin-bottom: 0.15em;
+		border-radius: 100px;
+		transition: background 0.4s; /* Smooth transition for hover effect */
 	}
 
 	nav li a:hover
