@@ -186,15 +186,6 @@ figcaption
 
 
 
-
-
-
-
-
-
-
-
-
 /*Favorites-----------------------*/
 .fav-images
 {
@@ -206,6 +197,79 @@ figcaption
 }
 
 /*Hobbies-------------------------*/
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items */
+}
+
+.artwork {
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px); /* Adjusts item size */
+    max-width: calc(25% - 20px); /* Ensures it doesn't exceed this width */
+}
+
+.artwork img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds some shadow for depth */
+}
+
+#gallary h2 {
+    text-align: center; /* Centers the title */
+    margin-bottom: 20px; /* Adds space below the title */
+}
+
+
+/*Hobbies-------------------------*/
+#gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Centers the items */
+    padding: 10px; /* Adjusts padding */
+}
+
+.artwork {
+    margin: 5px; /* Space between items */
+    flex: 1 1 calc(33.33% - 10px); /* Default: 3 items per row on desktop */
+    max-width: calc(33.33% - 10px); /* Maximum width for 3 items */
+}
+
+.artwork img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Adds rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+}
+
+#gallary h2 {
+    text-align: center; /* Centers the title */
+    margin: 15px 0; /* Adds space above and below the title */
+}
+
+#tools h2
+{
+	font-size: 2em;
+}
+
+
+.mediums
+{
+	list-style-type: none;
+	font-size: 1em;
+}
+
+.mediums li
+{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 1em;
+}
+.tools li a
+{
+	text-decoration: none;
+	color: black;
+}
 
 
 
@@ -261,6 +325,11 @@ figcaption
 		bottom: 0;
 
 	}
+
+	.artwork {
+        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile */
+        max-width: calc(100% - 10px);
+    }
 
 }
 
@@ -341,7 +410,11 @@ figcaption
 	{
 		font-size: 1em;
 	}
-}
+	
+	.artwork {
+        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile (320px to 629px) */
+        max-width: calc(100% - 10px);
+    }
 
 
 /*Media Query for Desktop viewport*/
@@ -432,6 +505,11 @@ figcaption
 		box-shadow: 0px 4px 50px 0px rgb(63, 113, 189);
 	}
 
+	.artwork {
+        flex: 1 1 calc(33.33% - 10px); /* 3 items per row on tablets */
+        max-width: calc(33.33% - 10px);
+    }
+
 	footer {
 		position: -webkit-sticky;
 		position: sticky; 
@@ -445,11 +523,59 @@ figcaption
 		height: 4em;
 
 	}
+	#gallary
+	{
+		padding-top: 1em;
+		padding-bottom: 1em;
+		color: black;
+		width: 100%;
+		margin: 0;
+	}
 
+	.artwork 
+	{
+		align-items: center;
+        flex: 1 1 calc(50% - 10px); /* 2 items per row on tablets (630px to 1020px) */
+        max-width: calc(50% - 10px);
+		margin: 0 auto;
+		transition: box-shadow 0.4s, max-width 0.4s, border-radius 0.4s;
 
+    }
 
+	.artwork:hover .img
+	{
+		scale(1.1); /* Scale the image on hover */
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Equal shadow all around */
+		border-radius: 400px;
+	}
+	.artwork:hover
+	{
+		max-width: calc(80% - 10px);
+		margin: 0 auto;
+	}
 
+	#tools .mediums
+	{
+		font-size: 2em;
+	}
 
+	.tools li
+	{
+		list-style-type: none;
+	}
+	.tools li a 
+	{
+		font-size: .8em;
+	}
 
+	.tools li a:hover 
+	{
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		padding-top: 0.05em;
+		padding-bottom: 0.05em;
+		font-size: 2em;
+		border-style: solid;
+	}
 }
 
