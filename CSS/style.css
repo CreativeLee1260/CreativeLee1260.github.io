@@ -36,6 +36,7 @@ nav
 	backdrop-filter: blur(40px);
 	background-color: rgba(0, 0, 0, 0.219);
 	padding-bottom: 0em;
+	z-index: 1000;
 }
 nav ul
 {
@@ -74,7 +75,10 @@ main
 {
 	clear: both;
 	background-color: ghostwhite;
-	margin: 8%;
+	margin-top: 0;
+	margin-bottom: 4em;
+	margin-left: 8%;
+	margin-right: 8%;
 	font-size:1.25em;
 }
 
@@ -122,19 +126,17 @@ footer p a
 
 /*index/home----------------------*/
 
-
-
-
-
-
-
-
+audio
+{
+	margin-top: 11em;
+}
 
 /*About me----------------------- */
 #map
 {
 	align-items: center;
 	padding: 0;
+	padding-bottom: 2em;
 }
 .amap
 {
@@ -184,6 +186,16 @@ figcaption
 
 /*contacts------------------------*/
 
+#form
+{
+	margin-top: 2%;
+	background-color: black;
+	padding: 2%;
+}
+#form h2
+{
+	text-align: center;
+}
 
 
 /*Favorites-----------------------*/
@@ -194,6 +206,12 @@ figcaption
 	height: 100%;
 	border-width: 10px;
 	border-radius: 40px;
+}
+
+#Favorites li
+{
+	list-style-type: none;
+	font-size: 1em;
 }
 
 /*Hobbies-------------------------*/
@@ -412,7 +430,7 @@ figcaption
 	}
 	
 	.artwork {
-        flex: 1 1 calc(100% - 10px); /* 1 item per row on mobile (320px to 629px) */
+        flex: 1 1 calc(100% - 10px); 
         max-width: calc(100% - 10px);
     }
 
@@ -430,6 +448,7 @@ figcaption
 		backdrop-filter: blur(40px);
 		background-color: rgba(0, 0, 0, 0.219);
 		padding-bottom: 0em;
+		margin-bottom: 0;
 	}
 	nav ul
 	{
@@ -451,7 +470,7 @@ figcaption
 		text-align: center;
 		width: 7em;
 		height: 1.25em;
-		align-items: center;         /* Center vertically */
+		align-items: center;        
     	justify-content: center;    
 	    padding: 0.5em 0em;
 		text-decoration: none;
@@ -460,7 +479,7 @@ figcaption
 		margin-top: 0.15em;
 		margin-bottom: 0.15em;
 		border-radius: 100px;
-		transition: background 0.4s; /* Smooth transition for hover effect */ 
+		transition: background 0.4s;
 		transition: box-shadow 0.4s;
 		transition: width 0.4s ;
 	}
@@ -506,7 +525,7 @@ figcaption
 	}
 
 	.artwork {
-        flex: 1 1 calc(33.33% - 10px); /* 3 items per row on tablets */
+        flex: 1 1 calc(33.33% - 10px); 
         max-width: calc(33.33% - 10px);
     }
 
@@ -535,7 +554,7 @@ figcaption
 	.artwork 
 	{
 		align-items: center;
-        flex: 1 1 calc(50% - 10px); /* 2 items per row on tablets (630px to 1020px) */
+        flex: 1 1 calc(50% - 10px);
         max-width: calc(50% - 10px);
 		margin: 0 auto;
 		transition: box-shadow 0.4s, max-width 0.4s, border-radius 0.4s;
@@ -544,8 +563,8 @@ figcaption
 
 	.artwork:hover .img
 	{
-		scale(1.1); /* Scale the image on hover */
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Equal shadow all around */
+		scale(1.1);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 		border-radius: 400px;
 	}
 	.artwork:hover
@@ -556,26 +575,263 @@ figcaption
 
 	#tools .mediums
 	{
-		font-size: 2em;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-size: 1.5em;
+		font-weight: bold;
 	}
 
-	.tools li
+	.tools li 
 	{
 		list-style-type: none;
 	}
 	.tools li a 
 	{
-		font-size: .8em;
-	}
-
-	.tools li a:hover 
-	{
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		padding-left: 0.5em;
 		padding-right: 0.5em;
+		font-size: .8em;
+		transition: 
+			padding-left 0.4s, 
+			padding-right 0.4s, 
+			padding-top 0.4s, 
+			padding-bottom 0.4s, 
+			font-size 0.4s, 
+			border-style 0.4s, 
+			border-radius 0.4s;
+	}
+	.tools li a:hover 
+	{
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		padding-top: 0.05em;
 		padding-bottom: 0.05em;
-		font-size: 2em;
+		font-size: .8em;
 		border-style: solid;
+		border-radius: 40px;
+		border-color: rgb(63, 113, 189);
+		color: rgb(63, 113, 189);
+		border-width: 2px;
 	}
-}
 
+	.hero-video {
+		position: relative;
+		width: 100vw; 
+		height: 100vh;
+		overflow: hidden;
+		margin-top: 50px; 
+	}
+	
+	body {
+		margin: 0; 
+		padding: 0;
+		background-color: ghostWhite;
+	}
+	
+	.hero-video 
+	{
+		margin-top: 0;
+		padding-top: 0em;
+		width: 100vw; /* Use full viewport width */
+		margin-left: calc(-50vw + 50%); /* Center align */
+		position: relative;
+		height: 60em; /* Adjust for nav height */
+		overflow: hidden;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	
+	
+	@keyframes fadeIn {
+		0% { opacity: 0; }
+		25% { opacity: 0.25; }
+		50% { opacity: 0.5; }
+		100% { opacity: 1; }
+	}
+	
+	@keyframes fadeOut 
+	{
+		0% { opacity: 1;}
+		25%{ opacity 0.25;}
+		50% { opacity: 0.5;}
+		100% { opacity: 0;}
+	}
+	
+
+	.overlay-text 
+	{	
+		font-size: 2em;
+		position: absolute;
+		top: 50%; /* center vertically */
+		left: 50%; /* center horizontally */
+		transform: translate(-50%, -50%); /* adjust for centering */
+		color: white; /* or any color you prefer */
+		padding: 10px; /* optional: some padding */
+		text-align: center; /* center text */
+		z-index: 20;
+	}
+	.message 
+	{
+		opacity: 0; /* start invisible */
+		position: absolute; /* stack messages */
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; /* Smooth transition */
+		animation-iteration-count: infinite;
+		width: 100%; /* Ensure messages take full width */
+		display: flex; /* Use flexbox for centering */
+		justify-content: center; /* Center horizontally */
+		align-items: center; /* Center vertically */
+		text-align: center; /* Center text */
+		left: 50%; /* Position from the left */
+		transform: translate(-50%, -50%); /* Center adjust */
+	}
+	.message:nth-child(1) 
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 0s, 6s; /* 4s hold after fade-in */
+	}
+	
+	.message:nth-child(2)
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 8s, 14s; /* 4s hold after fade-in */
+	}
+	
+	.message:nth-child(3) 
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 16s, 22s; /* 4s hold after fade-in */
+	}
+	
+	.message:nth-child(4) 
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 24s, 30s; /* 4s hold after fade-in */
+	}
+	
+	.message:nth-child(5) 
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 32s, 38s; /* 4s hold after fade-in */
+	}
+	.message:nth-child(6) 
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 40s, 46s; /* 4s hold after fade-in */
+	}
+	.message:nth-child(7) 
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 48s, 54s; /* 4s hold after fade-in */
+	}
+	.message:nth-child(8) 
+	{
+		animation: fadeIn 2s ease-in forwards, fadeOut 2s ease-out forwards; 
+		animation-delay: 56s, 62s; /* 4s hold after fade-in */
+	}
+
+	#forms
+	{
+		margin-top: 2%;
+		background-color: black;
+		padding: 3%;
+		border-radius: 40px;
+	}
+	#forms h2
+	{
+		color: white;
+		text-align: center;
+	}
+	#forms label
+	{
+		padding-right: 2em;
+		color: white;
+	}
+
+	input
+	{
+		width: 20em;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+		border-radius: 40px;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-weight: bolder;
+		transition: outline 0.3s, border-color 0.3s, box-shadow 0.3s;
+	}
+	input:focus {
+		outline: none; 
+		border-color: #ffffff; 
+		box-shadow: 0 0 8px #ffffff, 0 0 15px rgba(209, 209, 209, 0.5);
+	}
+	#submit-button
+	{
+		width: 7em;
+		background-color: rgb(255, 255, 255);
+		margin-top: 2em;
+		padding-bottom: .5em;
+		padding-top: .5em;
+		padding-left: 1em;
+		padding-right: 1em;
+		border-radius: 40px;
+		transition: padding 0.3s;
+		text-align: center;
+		transition: box-shadow 0.3s;
+	}
+
+	#submit-button:hover
+	{
+		outline: none; 
+		border-color: #ffffff; 
+		box-shadow: 0 0 8px #ffffff, 0 0 15px rgba(209, 209, 209, 0.5);
+	}
+
+	#contacts li
+	{
+		list-style: none;
+		list-style-type: none;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 1.5em;
+	}
+
+	#contacts li a
+	{
+		color: black;
+		text-decoration: none;
+		transition: color 0.3s, border-style 0.3s, background-color 0.3s, padding 0.3s, border-radius 0.3s, margin-left 0.3s;
+	}
+
+	#contacts li a:hover
+	{
+		color: white;
+		border-width: 0;
+		border-style: solid;
+		background-color: black;
+		padding: 0.4em;
+		padding-left: 1em;
+		padding-right: 1em;
+		border-radius: 100px;
+		margin-left: 0.7em;
+	}
+
+	#music {
+		display: flex; /* or use display: grid; for the grid method */
+		flex-wrap: wrap; /* Flexbox only */
+		justify-content: space-between; /* Flexbox only */
+		/* grid-template-columns: repeat(3, 1fr); */ /* Uncomment for grid method */
+		/* gap: 10px; */ /* Uncomment for grid method */
+	}
+
+	#song
+	{
+		flex: 1; /* or no flex property for grid */
+		margin: 10px; /* Add margin for Flexbox */
+		max-width: 30%; /* Limit width for Flexbox */
+		/* margin: 0; */ /* Uncomment for grid method */
+	}
+
+	/* Optional: Style iframe */
+	#songframe
+	{
+		width: 100%; /* Full width of the figure */
+		height: 400px; /* Set a height */
+		border-radius: 40px;
+	}
+
+}	
