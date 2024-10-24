@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- 
+	Student Name: Lee Campos
+	File Name: about-us
+	Date: 9/4/2023
+-->
+
+<html lang="en">
+	<head>
+		<title>About us</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="CSS/styles.css" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Francois+One&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="Images/favicon.ico">
+		<link rel="icon" type="Image/png" sizes="32x32" href="Images/favicon-32.png">
+		<link rel= "apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+		<link rel="icon" sizes="192x192" href="Images/android-chrome-192.png">
+	</head>
+	<body>
+		<div id="container">
+			<!--Mobile Nav-->
+			<nav class="mobile-nav">
+				<div id="menu-links">
+					<a href="fitness-Index.html">Home</a>
+					<a href="About-Us.html">About Us</a>
+					<a href="Classes.html">Classes</a>
+					<a href="nutrition.html">Nutrition</a>
+					<a href="Contact-Us.html">Contact Us</a>
+				</div>
+				<a class="menu-icon" onclick="hamburger()">
+					<div>&#9776;</div>
+				</a>
+			</nav>
+			<!-- The purpose of the header is to display the title of the webpage on the webpage -->
+			<!-- It should be dynamic, because the title may change over time of developing the webpage -->
+			<header id="ffc-logo">
+				<a href="index.html"><img src="Images/forward-fitness-logo.png" alt="Forward Fitness Club logo"></a>
+			</header>
+			
+			<!-- The purpose of the nav is to display the links & categories of your website -->
+			<!-- It should be dynamic, because you may want to add more sections -->
+			<nav class="tablet-desktop">
+				<ul>
+					<li><a href="fitness-Index.html">Home</a></li> 
+					<li><a href="About-Us.html">About Us</a></li> 
+					<li><a href="Classes.html">Classes</a></li> 
+					<li><a href="nutrition.html">Nutrition</a></li> 
+					<li><a href="Contact-Us.html">Contact Us</a></li> 
+				</ul> 
+			</nav>
+			
+			<!-- The purpose of the main is to explain the purpose of what your website is promoting -->
+			<!-- It should be static, because your reasoning won't change -->
+			<main>
+				<video controls poster="Images/hero-image.jpg">
+					<source src="Media/ffc_video.mp4" type="video/mp4">
+					<source src="Media/ffc_video.webm" type="video/webm">
+					<track src="media/captions.vtt" kind="captions" srclang="en" label="Captions">
+					<p>Your browser does not support video elements</p>
+					<track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="Engish descriptions">
+				</video>
+
+				<section id="weights">
+					<h1>Weights</h1>
+					<img class="round" src="Images/people-with-weights.jpg" alt="Two people working out with weights in each hand">
+					<p>Our facility includes a weight training area with several weight options. Build lean muscle with weights and improve your core with weight training.</p>
+					<ul class="tablet-desktop">
+						<li>Dumbbells</li>
+						<li>Kettlebells</li>
+						<li>Barbells</li>
+					</ul>	
+				</section>
+				
+				<section id="cardio">
+					<h1>Cardio</h1>
+					<img class="round" src="Images/people-workingout-machines.jpg" alt="Cardio equipment">
+					<p>Burn fat through cardio workouts. Experts recommend 150 minutes of cardio each week. We have several equipment choices for your workout.</p>
+					<ul class="tablet-desktop">
+						<li>Treadmills</li>
+						<li>Elliptical Machines</li>
+						<li>Exercise Bikes</li>
+					</ul>
+				</section>
+				
+				<section id="training">
+					<h1>Personal Training</h1>
+					<img class="round" src="Images/personal-trainer.jpg" alt="Personal training">
+					<p>Our certified personal trainers work with you to help obtain your fitness goals and track your progress. Personal training has many benefits.</p>
+					<ul class="tablet-desktop"></ul>
+						<li>Accountability</li>
+						<li>Personalized program</li>
+						<li>Consistent Support and Motivation</li>
+					</ul>
+				</section>
+				
+				<section id="exercises" class="tablet-desktop">
+					<h1>Common Exercises</h1>
+					<p>The following exercises are ones we encourage our clients to do as part of their daily exercise routine.</p>
+					<dl>
+						<dt>Burpee</dt>
+						<dd>Burpees are a great full-body exercise to increase your strength and endurance. Begin in a standing position, drop into a squat and extend your hands forward, kick your feet back, then forward again quickly, and then jump up from a squatted position.
+							<span class="viewex" onclick="burpees()">View Example</span>
+						</dd>
+						
+						<dt>Plank</dt>
+						<dd>Planks build your core strength. To perform a plank, get in a push-up position and rest your forearms on the floor. Hold the position for as long as you can.</dd>
+						
+						<dt>Mountain Climbers</dt>
+						<dd>Mountain climbers are a good cardio exercise. Place your hands on the floor in a push-up position, then bring one knee up to your chest, then switch as quickly as you can (as though you are climbing a mountain).</dd>
+					</dl>
+					<video controls id="example">
+						<source id="vid-src" src="vid" type="video/mp4">
+						<track id="despsrc" src="des" kind="description" srclang="en" label="English Description">
+						<p>Your browser does not support the video element.</p>
+					</video>
+					<p>For more information about how to stay active, visit the <a href="https://health.gov/pcsfn" class="external-link" target="_blank">U.S. Deperatment of Health and Human Services</a>.</p>
+				</section>
+			</main>
+			
+			<!-- The purpose of the footer is to display contact info and copyright -->
+			<!-- It should be dynamic, because copyright can change over time -->
+			<footer>
+				<p><a href="mailto:forwardfitness@club.net">forwardfitness@club.net</a></p>
+				<p>&copy; Copyright 2021. All Rights Reserved.</p>
+			</footer>
+		</div>
+		<script src="Scripts/script.js"></script>
+	</body>
+</html>
