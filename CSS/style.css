@@ -173,9 +173,22 @@ figcaption
 	color:hwb(227 45% 49%);
 	font-weight: 200;
 	border: solid;
-	border-width: 2px;
+	border-width: 1px;
 	margin-left: 0.5em;
 	transition: 0.4s; /* Smooth transition for hover effect */
+}
+
+#sectorTwo
+{
+	margin-top: 2em;
+	padding-top: 1em;;
+	padding-bottom: 1em;
+	padding-left: 5em;
+	padding-right: 5em;;
+	background-color: ghostwhite;
+	box-shadow: 2px 3px 20px 5px rgba(0, 0, 0, 0.26);
+	border-radius: 100px;
+
 }
 
 #javascripts
@@ -206,7 +219,7 @@ figcaption
 	color:hwb(227 45% 49%);
 	font-weight: 200;
 	border: solid;
-	border-width: 2px;
+	border-width: 1px;
 	margin-left: 0.5em;
 	transition: 0.4s; /* Smooth transition for hover effect */
 }
