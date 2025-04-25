@@ -155,7 +155,19 @@ figcaption
 	padding-top: 0.5em;
 	font-family: lato, 'Arial Narrow', Arial, sans-serif;
 }
+#map figure iframe
+{
+	padding-top: 0em;
+	margin-top: 0em;
+	border-radius: 50px;
+}
 
+#intro
+{
+	text-align: center;
+	padding-bottom: 0em;
+	margin-bottom: 0em;
+}
 
 
 /*projects----------------------- */
@@ -172,23 +184,46 @@ figcaption
 	border-radius:100px;
 	color:hwb(227 45% 49%);
 	font-weight: 200;
-	border: solid;
-	border-width: 1px;
+	border-color: rgb(216, 216, 216);;
 	margin-left: 0.5em;
+	box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.26);
 	transition: 0.4s; /* Smooth transition for hover effect */
 }
-
-#sectorTwo
+#sectortwo
 {
 	margin-top: 2em;
-	padding-top: 1em;;
-	padding-bottom: 1em;
+	padding-top: 1.5em;;
+	padding-bottom: 1.5em;
 	padding-left: 5em;
 	padding-right: 5em;;
 	background-color: ghostwhite;
-	box-shadow: 2px 3px 20px 5px rgba(0, 0, 0, 0.26);
+	box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.26);
 	border-radius: 100px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	border-color: rgb(216, 216, 216);
 
+}
+#sectorTwo:hover
+{
+	margin-top: 2em;
+	padding-top: 1.5em;;
+	padding-bottom: 1.5em;
+	padding-left: 1em;
+	padding-right: 5em;;
+	background-color: ghostwhite;
+	box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.26);
+	border-radius: 100px;
+	border-width: 1px;
+	border-color: rgb(216, 216, 216);
+	transition: 0.5s ease 0.45s;;
+
+}
+
+#sectorTwo h2
+{
+	margin-left: 1.3em;
 }
 
 #javascripts
@@ -218,9 +253,9 @@ figcaption
 	border-radius:100px;
 	color:hwb(227 45% 49%);
 	font-weight: 200;
-	border: solid;
-	border-width: 1px;
+	border-color: rgb(216, 216, 216);;
 	margin-left: 0.5em;
+	box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.26);
 	transition: 0.4s; /* Smooth transition for hover effect */
 }
 
@@ -558,7 +593,6 @@ tr:hover
 		text-align: center;
 		padding: 0em; 
 		bottom: 0;
-
 	}
 
 	.artwork {
